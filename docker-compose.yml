@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  jenkins:
+    privileged: true
+    build: .
+    image: jenkins/jenkins:latest
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    environment:
+      USER_CHOCOLATEEN_PASSWORD: "lopes"
+      USER_VAUGIE_G_PASSWORD: "lopes"
+      USER_I_DONT_KNOW_PASSWORD: "lopes"
+      USER_NASSO_PASSWORD: "lopes"
